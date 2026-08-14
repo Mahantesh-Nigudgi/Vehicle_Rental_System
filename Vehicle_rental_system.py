@@ -64,19 +64,20 @@ class Vehicle_rental:
     def bike_total_rent(self,model,days):
             for val in self.vehicles:
                 if val['Vechile_model']==model:
-                    print("----------TOTAL RENT----------")
-                    print()
-                    print('Vehicle :',val['Vechile_model'])
-                    print('Rent per day :',val['Rent'])
-                    print('Number of days :',days)
-                    print()
-                    print('------------------------------')
-                    print()
-                    print('The Total Rent :', val['Rent'],'X', days, '=' ,val['Rent']*days)
-                else:
-                    print()
-                    print('This bike is not available, so please check for other bike')
-                    break
+                    if val['Vechile_model']==model:
+                        print("----------TOTAL RENT----------")
+                        print()
+                        print('Vehicle :',val['Vechile_model'])
+                        print('Rent per day :',val['Rent'])
+                        print('Number of days :',days)
+                        print()
+                        print('------------------------------')
+                        print()
+                        print('The Total Rent :', val['Rent'],'X', days, '=' ,val['Rent']*days)
+                    else:
+                        print()
+                        print('This bike is not available, so please check for other bike')
+                        break
 
 v1=Vehicle_rental()
 
